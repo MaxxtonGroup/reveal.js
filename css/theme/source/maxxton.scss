@@ -1,56 +1,91 @@
 /**
  * Maxxton theme for reveal.js.
  * Author: Maxxton
+ * Uri: http://www.maxxton.com
  */
 
-
-// Default mixins and settings -----------------
+// Default mixins and settings 
+// -----------------------------------
 @import "../template/mixins";
 @import "../template/settings";
-// ---------------------------------------------
-
-
 
 // Include theme-specific fonts
+// -----------------------------------
+
 @import url(../../lib/font/league-gothic/league-gothic.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-
-
 html * {
   color-profile: sRGB;
   rendering-intent: auto;
 }
 
 // Solarized colors
-$base03:    #002b36;
-$base02:    #073642;
-$base01:    #586e75;
-$base00:    #657b83;
-$base0:     #839496;
-$base1:     #93a1a1;
-$base2:     #eee8d5;
-$base3:     #f3f3f3;
-$yellow:    #b58900;
-$orange:    #ff6900;
-$red:       #dc322f;
-$magenta:   #d33682;
-$violet:    #6c71c4;
-$blue:      #268bd2;
-$cyan:      #2aa198;
-$green:     #859900;
+// ----------------------------------
 
+$base03: #002b36;
+$base02: #073642;
+$base01: #586e75;
+$base00: #657b83;
+$base0: #839496;
+$base1: #93a1a1;
+$base2: #eee8d5;
+$base3: #f3f3f3;
+
+$maxxtonBlack: #000;
+$maxxtonOrange: #f26922;
+$maxxtonGrey: #c7c6c5;
+$maxxtonBlue: #45a4de;
+$maxxtonGreen: #5fdad1;
+$maxxtonPurple: #bf83d6;
+
+$yellow: #b58900;
+$orange: #ff6900;
+$red: #dc322f;
+$magenta: #d33682;
+$violet: #6c71c4;
+$blue: #268bd2;
+$cyan: #2aa198;
+$green: #859900;
+$white: #fff;
+  
 // Override theme settings (see ../template/settings.scss)
-$mainColor: $base00;
-$headingColor: $base01;
+// -------------------------------
+  
+$mainColor: $maxxtonBlack;
+$headingColor: $maxxtonBlack;
 $headingTextShadow: none;
-$backgroundColor: $base3;
-$linkColor: $orange;
-$linkColorHover: lighten( $linkColor, 20% );
-$selectionBackgroundColor: $magenta;
+$backgroundColor: transparent;
+$linkColor: $maxxtonOrange;
+$linkColorHover: lighten( $linkColor, 15%);
+$selectionBackgroundColor: $maxxtonBlue;
 
-
-
-
-// Theme template ------------------------------
+// Theme template 
+// ------------------------------
 @import "../template/theme";
-// ---------------------------------------------
+
+// Theme custom
+// ------------------------------
+.reveal {
+  .slides {
+    section {
+      &.main-slide {
+        color: $white;
+        h3 {
+          color: $white;
+        }
+        a {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .backgrounds {
+    .slide-background {
+      background-position: left;
+      &.main-slide {
+        background-size: cover;
+      }
+    }
+  }
+}
