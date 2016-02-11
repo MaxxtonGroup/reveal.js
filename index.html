@@ -36,6 +36,12 @@
 
 	<body>
 
+		<!--
+			- if you use markdown, be careful with tabs as that translates to <pre> elements, always use spaces
+			- see the first slide with the aside element for how you can add speaker notes
+			- see https://documentation.maxxton.com/display/OWC/House+style for more info
+		-->
+
 		<div class="reveal">
 
 			<div class="slides">
@@ -51,8 +57,21 @@
 					<p>
 						Complete the Maxxton slides with section class="main-slide" to have the big front image "images/mainbg.jpg"( styling will be applied in white) and when having no class it will be a subpage with the left side ribbon ("images/subbg.jpg") styling will be applied in black
 					</p>
+					<aside class="notes">
+			      Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+			    </aside>
 				</section>
-				
+
+				<section data-background="images/subbg.jpg" data-markdown>
+					<script type="text/template">
+            ## A markdown sheet
+            * with
+            * a
+            * list
+            	* and nested list item
+					</script>
+				</section>
+
 				<section data-background="images/subbg.jpg" data-transition="zoom">
 					<h2>Maxxton list</h2>
 					<ol>
